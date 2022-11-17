@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -17,7 +18,7 @@ namespace Platformer
         Hurt,
     }
 
-    public class Player : MonoBehaviour
+    public class Player : MonoBehaviourPun, IPunObservable
     {
         private static readonly int AnimState = Animator.StringToHash("state");
 
@@ -150,6 +151,13 @@ namespace Platformer
                     state = State.Falling;
                 }
             }
+        }
+        
+        public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+        {
+            Debug.Log("OnPhotonSerializeView");
+            // if (stream.IsWriting) this.StreamWriting(stream);
+            // else this.StreamReading(stream, info);
         }
     }
 }

@@ -729,6 +729,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 304521334}
   m_CullTransparentMesh: 1
+--- !u!114 &360703977 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1701636042694502288, guid: d4304f1acbb40fd4eb6384888c471c78, type: 3}
+  m_PrefabInstance: {fileID: 1155495240}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &371754039
 GameObject:
   m_ObjectHideFlags: 0
@@ -2938,6 +2949,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1635810983}
     m_Modifications:
+    - target: {fileID: -9200771311361603802, guid: d4304f1acbb40fd4eb6384888c471c78, type: 3}
+      propertyPath: roomName
+      value: 
+      objectReference: {fileID: 360703977}
     - target: {fileID: 1701636042848033841, guid: d4304f1acbb40fd4eb6384888c471c78, type: 3}
       propertyPath: m_Name
       value: RoomInfo
@@ -5069,7 +5084,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 73320209}
         m_TargetAssemblyTypeName: PhotonRoom, Assembly-CSharp
-        m_MethodName: StartGame
+        m_MethodName: ClickStartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

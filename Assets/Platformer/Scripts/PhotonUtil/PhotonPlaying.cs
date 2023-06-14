@@ -1,37 +1,59 @@
+using System;
 using Photon.Pun;
 using Photon.Realtime;
 using System.Collections.Generic;
+using Cinemachine;
+using Platformer;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using Player = Photon.Realtime.Player;
 
 public class PhotonPlaying : MonoBehaviourPunCallbacks
 {
     public static PhotonPlaying instance;
-    public string photonPlayerName = "Player";
+    public string photonPlayerName = "PhotonPlayer";
     public List<PlayerProfile> players = new List<PlayerProfile>();
 
+    public static event Action<Transform> OnCreateMyPlayer;
+    
     protected void Awake()
     {
         PhotonPlaying.instance = this;//Dont do this in your game
-    
-        this.LoadRoomPlayers();
-        this.SpawnPlayer();
+    }
+
+    public override void OnEnable()
+    {
+        base.OnEnable();
+        LoadRoomPlayers();
+        SpawnPlayer();
     }
     
     protected virtual void SpawnPlayer()
     {
+        Debug.Log("SpawnPlayer");
         if (PhotonNetwork.NetworkClientState != ClientState.Joined)
         {
-            Invoke("SpawnPlayer", 1f);
+            Invoke(nameof(SpawnPlayer), 1f);
             return;
         }
     
-        GameObject playerObj = PhotonNetwork.Instantiate("Player", Vector3.zero, Quaternion.identity);
-        PhotonView photonView = playerObj.GetComponent<PhotonView>();
+        var playerObj = PhotonNetwork.Instantiate("PhotonPlayer", Vector3.zero, Quaternion.identity);
+        var photonView = playerObj.GetComponent<PhotonView>();
         if (photonView.IsMine)
         {
-            PhotonPlayer photonPlayer = playerObj.GetComponent<PhotonPlayer>();
-            PhotonPlayer.me = photonPlayer;
+            var photonPlayer = playerObj.GetComponent<PhotonPlayer>();
+            PhotonPlayer.Me = photonPlayer;
+
+            var textObj = GameObject.Find("Cherry Number");
+            var text = textObj.GetComponent<TextMeshProUGUI>();
+
+            if (text)
+            {
+                photonPlayer.cherryText = text;
+            }
+
+            if (OnCreateMyPlayer != null) OnCreateMyPlayer(photonPlayer.transform);
         }
     }
 

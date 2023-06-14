@@ -15,6 +15,9 @@ public class PhotonRoom : MonoBehaviourPunCallbacks
     public List<RoomInfo> updatedRooms;
     public List<RoomProfile> rooms = new List<RoomProfile>();
 
+
+    private string sceneName = "SampleScene";
+
     protected void Awake()
     {
         PhotonRoom.instance = this;//Dont do this in your game
@@ -62,7 +65,7 @@ public class PhotonRoom : MonoBehaviourPunCallbacks
     public virtual void StartGame()
     {
         Debug.Log(transform.name + ": Start Game");
-        PhotonNetwork.LoadLevel("SampleScene");
+        PhotonNetwork.LoadLevel(sceneName);
     }
 
     public override void OnCreatedRoom()
@@ -120,8 +123,11 @@ public class PhotonRoom : MonoBehaviourPunCallbacks
 
         foreach (RoomProfile roomProfile in this.rooms)
         {
-            UIRoomProfile uiRoomProfile = Instantiate(this.roomPrefab, this.roomContent, true);
+            Debug.Log(roomProfile.name);
+            UIRoomProfile uiRoomProfile = Instantiate(this.roomPrefab);
+            Debug.Log(uiRoomProfile.gameObject);
             uiRoomProfile.SetRoomProfile(roomProfile);
+            uiRoomProfile.transform.SetParent(this.roomContent);
         }
     }
 

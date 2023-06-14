@@ -6,6 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Platformer/Scenes/1_PhotonRoom.unity
+    guid: 1e4527df640a149439c95d8568c0de1c
+  - enabled: 1
     path: Assets/Platformer/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 71c40ad4a126b84488c720037419c8c3, type: 2}

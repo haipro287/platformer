@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Learn Live Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Learn Live Group
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 9fccfe01d5c99384ebeed7577dec846f
+  m_SerializeEntries:
+  - m_GUID: 2f2d9a2b9ece63f4f80270e438cac266
+    m_Address: Assets/Platformer/StaticAssets/Prefabs/Enemies/Frog.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 17a0b17964a51b5479f5c51218916cdb, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: aba7a11d588d8a542a1271622026c3ae, type: 2}
+    - {fileID: 11400000, guid: 3a5940d6c4d0e984a95ab06fc3957572, type: 2}

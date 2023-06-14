@@ -12,8 +12,6 @@ public class UIRoomProfile : MonoBehaviour
     public virtual void SetRoomProfile(RoomProfile roomProfile)
     {
         this.roomProfile = roomProfile;
-        Debug.Log(roomName.text);
-        Debug.Log(roomProfile.name);
         this.roomName.text = this.roomProfile.name;
     }
 

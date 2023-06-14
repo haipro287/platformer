@@ -856,7 +856,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &904001044
 GameObject:
@@ -906,6 +906,7 @@ GameObject:
   m_Component:
   - component: {fileID: 905805086}
   - component: {fileID: 905805085}
+  - component: {fileID: 905805087}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -965,8 +966,20 @@ Transform:
   m_Children:
   - {fileID: 69530755}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &905805087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905805084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ff0290db3da4f369b02428863be0726, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &953454418 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9003123597234764113, guid: aa766b55eba786447933f9b3ff4744ce, type: 3}
@@ -1005,9 +1018,9 @@ RectTransform:
   m_Father: {fileID: 1198962600}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -257.0155, y: 171}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: -207.0155, y: 121}
   m_SizeDelta: {x: 159.969, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1133790010
@@ -1399,6 +1412,52 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa766b55eba786447933f9b3ff4744ce, type: 3}
+--- !u!1 &1749703079
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1749703081}
+  - component: {fileID: 1749703080}
+  m_Layer: 0
+  m_Name: PhotonRoomAuto
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1749703080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749703079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0338092f7a832224e83c73d3e71168bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nickName: Nick
+  roomName: Room
+--- !u!4 &1749703081
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749703079}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 466.8797, y: 382.7375, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1754231493
 GameObject:
   m_ObjectHideFlags: 0
@@ -1579,10 +1638,10 @@ RectTransform:
   m_Father: {fileID: 1198962600}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -403.24716, y: 173.44788}
-  m_SizeDelta: {x: 135.5057, y: 41.1042}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: -353.24716, y: 123.447876}
+  m_SizeDelta: {x: 135.5057, y: 41.104202}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2000322125
 MonoBehaviour:

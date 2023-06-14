@@ -29,6 +29,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4765368103528997241}
   m_Father: {fileID: 0}
@@ -145,10 +146,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4765368103180735142}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a7a32a70263bcd418e37c865080e3a1, type: 3}
+  m_Script: {fileID: 11500000, guid: b6f37e4daf09443baa81b6aec83dd359, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  photonStatus: 
+  <Status>k__BackingField: 
   textStatus: {fileID: 4765368103180735160}
 --- !u!1 &4765368103528997222
 GameObject:
@@ -178,6 +179,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4765368103180735161}
   m_RootOrder: 0
